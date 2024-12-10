@@ -1,5 +1,7 @@
 import { io } from "socket.io-client"; // import connection function
 
-const socket = io('https://multiplayer-chess-game-havj.onrender.com/'); // initialize websocket connection
+const serverUrl = process.env.SERVER_URL || 'http://localhost:8080'
+
+const socket = io(serverUrl); // initialize websocket connection
 
 export default socket;
